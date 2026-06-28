@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import CubicSpline  # Added for the smooth spline curve
 
-file_path = "D:/GEOTECH/ML/Python/compaction.xlsx" # replace with your file path
+file_path = "file_path" # replace with your file path
 df = pd.read_excel(file_path)
 
 moisture_content = df['Moisture Content'].to_numpy()
@@ -41,7 +41,7 @@ plt.scatter(omc, mdd, color='green', s=100, zorder=6,
 plt.axvline(x=omc, linestyle='--', color='gray', alpha=0.7)
 plt.axhline(y=mdd, linestyle='--', color='gray', alpha=0.7)
 
-# Formatting
+
 plt.title("Compaction Curve")
 plt.xlabel("Moisture Content (%)")
 plt.ylabel("Dry Density (g/cc or kg/m³)")
